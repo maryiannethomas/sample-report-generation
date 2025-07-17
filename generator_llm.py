@@ -7,7 +7,7 @@ TOGETHER_MODEL = "mistralai/Mistral-7B-Instruct-v0.2"
 
 def generate_text(prompt, max_tokens=400, stop="###"):
     headers = {
-        "Authorization": f"Bearer {TOGETHER_API_KEY}",
+        "Authorization": f"Bearer {api_key}",  # ✅ fixed
         "Content-Type": "application/json"
     }
 
@@ -28,6 +28,7 @@ def generate_text(prompt, max_tokens=400, stop="###"):
     result = response.json()
     content = result["choices"][0]["message"]["content"].strip()
     return content
+
 
 
 # Section generators using clean prompts
