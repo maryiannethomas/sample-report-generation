@@ -1,7 +1,7 @@
 import requests
 import os
 
-TOGETHER_API_KEY = "fc50e8d67f64ed95e00b6edd5f5a9a4fcd7726024d139643f253b3a9e85aa"  # 🔒 Insert your key here
+api_key = os.getenv("TOGETHER_API_KEY")
 TOGETHER_API_URL = "https://api.together.xyz/v1/chat/completions"
 TOGETHER_MODEL = "mistralai/Mistral-7B-Instruct-v0.2"
 
